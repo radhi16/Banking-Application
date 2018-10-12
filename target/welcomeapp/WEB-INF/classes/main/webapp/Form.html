@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<TITLE> MY FORM </TITLE>
+</HEAD>
+<BODY>
+<FORM action="./welcome1" method="post">
+My Name is: <input type="text" name="name"><br>
+
+My Education level is: <br>
+<input type="radio" name="education" value="Graduate" checked>Graduate<br>
+   <input type="radio" name="education" value="UnderGraduate"> UnderGraduate<br>
+  <input type="radio" name="education" value="PostGraduate"> PostGraduate <br>
+
+My city of residence is: 
+<select name="city">
+  <option value="Pune" selected>Pune</option>
+   <option value="Nashik">Nashik</option>
+  <option value="Mumbai">Mumbai</option>
+ </select>
+
+My favorite subjects are: <br>
+<input type="checkbox" name="subject" value="Database Design"> Database Design <br>
+<input type="checkbox" name="subject" value="Embedded Systems"> Embedded Systems <br>
+<input type="checkbox" name="subject" value="Data Mining"> Data Mining <br>
+<input type="checkbox" name="subject" value="Operating Systems"> Operating Systems <br>
+
+My self assessment: <br>
+<table>
+<tr> 
+<th> Subject </th>
+<th> Rating(1 to 5) </th>
+<th> Remark </th>
+</tr>
+
+<tr>
+<td> Database Design </td>
+<td> <input type="number" name="rating" min="1" max="5"> </td>
+<td> <input type="text" name="remark"> </td>
+</tr>
+
+<tr>
+<td> Embedded Systems </td>
+<td> <input type="number" name="rating" min="1" max="5"> </td>
+<td> <input type="text" name="remark"> </td>
+</tr>
+
+<tr>
+<td> Data Mining </td>
+<td> <input type="number" name="rating" min="1" max="5"> </td>
+<td> <input type="text" name="remark"> </td>
+</tr>
+
+<tr>
+<td> Operating Sytsems </td>
+<td> <input type="number" name="rating" min="1" max="5"> </td>
+<td> <input type="text" name="remark"> </td>
+</tr>
+</table>
+
+<br>
+My ideas joining date is: 
+<input type="date" name="joiningdate">
+<br>
+<br>
+
+Ideas WorkExperience 
+<textarea name="experience" rows="5" cols="10"></textarea>
+
+<input type="submit" value="Submit">
+
+</FORM>
+</BODY>
+</HTML>

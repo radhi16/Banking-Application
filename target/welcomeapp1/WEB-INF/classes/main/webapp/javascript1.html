@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE> JAVASCRIPT </TITLE>
+
+
+</HEAD>
+<BODY>
+
+
+<script>
+
+function validate(){
+	
+}
+function addition() {
+	
+    var number1 = parseInt(document.getElementById("1").value) ; 
+    var number2 = parseInt(document.getElementById("2").value) ;
+ 
+    if(isNaN((number1) || (number2) )) {
+    	 alert('Enter valid number (s)');
+    	}                                                    
+    else{
+    var sum = number1 + number2;
+    //alert(z);
+     document.getElementById("i3").innerHTML = sum ; }
+}
+
+function add(a,b) {
+	
+     var sum = a + b;
+     alert(a);
+    
+     document.getElementById("i3").innerHTML = " "+sum ; }
+
+
+function subtraction() {
+	
+    var number1 = parseInt(document.getElementById("1").value) ;
+    var number2 = parseInt(document.getElementById("2").value) ;
+
+    if(isNaN((number1) || (number2)) ) {
+    	 alert('Enter valid number (s)');
+    	}                                                    
+    else{
+    var difference = number1 - number2;
+    //alert(z);
+     document.getElementById("i3").innerHTML = difference ;}
+}
+
+function multiplication() {
+	
+    var number1 = parseInt(document.getElementById("1").value) ;
+    var number2 = parseInt(document.getElementById("2").value) ;
+
+    if(isNaN((number1) || (number2) )) {
+    	 alert('Enter valid number (s)');
+    	}                                                    
+    else{var multiply = number1 * number2;
+   //alert(z);
+     document.getElementById("i3").innerHTML = multiply;}
+}
+
+function division() {
+	
+    var number1 = parseInt(document.getElementById("1").value) ;
+    var number2 = parseInt(document.getElementById("2").value) ;
+
+    if(isNaN((number1) || (number2)) ) {
+    	 alert('Enter valid number (s)');
+    	}                                                    
+    else{var divide = number1 / number2;
+    //alert(z);
+     document.getElementById("i3").innerHTML = divide ;}
+}
+
+
+/*var a = "ab" ;
+var a;
+alert(a); */
+
+function loadDoc() {
+	var xhttp = new XMLHttpRequest();
+	 xhttp.onreadystatechange = function() {
+		 alert(xhttp.readyState);
+		if (xhttp.readyState == 4 && xhttp.status == 200){
+			document.getElementById("demo").innerHTML = xhttp.responseText;
+		} 
+	 };
+	 //xhttp.open("GET","AJAX.txt",true);
+	 xhttp.open("GET","/MyServerl?accountId=12",true);
+	 xhttp.send();
+}
+
+</script>
+
+
+Enter Numbers <br>
+1. <input type="text" name="variable1" id="1" > <br><br>
+ 
+2. <input type="text" name="variable2" id="2" > <br>
+
+Result = <p  id="i3"> </p><br>
+<br>
+
+<button type="button" onclick="addition();subtraction();">AdditionSub </button>
+
+<button type="button" onclick="addition()">Addition </button>
+<button type="button" onclick="subtraction()">Subtraction</button> 
+<button type="button" onclick="multiplication()">multiplication</button> 
+<button type="button" onclick="division()">division</button> 
+<br>
+<br>
+<button type="button" onclick="add(4,3);">functionCall </button>
+<br>
+<br>
+<div id="demo">AJAX </div>
+<button type="button" onclick="loadDoc()">AJAX </button>
+
+</BODY>
+</HTML>

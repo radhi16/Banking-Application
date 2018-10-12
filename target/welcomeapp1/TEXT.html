@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+  <HEAD>
+   <TITLE> My First Page </TITLE>
+</HEAD>
+<BODY>
+<H1>HELLO WORLD</H1>
+<H2>H2</H2>
+<H3>H3</H3>
+<H4>H4</H4>
+<H5>H5</H5>
+<H6>H6</H6>
+<a href="https://www.google.co.in/?gws_rd=ssl"> google </a>
+<p>
+Ordered List
+<ol>
+   <li>AA</li>
+  <li>BB</li>
+</ol>
+</p>
+<p>
+Unordered List
+<ul>
+  <li>PP</li>
+  <li>QQ</li>
+</ul>
+</p>
+
+<img src = "C:\bootcamp\programs\image.jpg" style="width:304px;height:228px;">
+<form>
+<input type="radio" name="options" value="1"  > Male <br>
+<input type="radio" name="options" value="2"checked> Female 
+
+</form>
+
+
+<div id="demo">AJAX </div>
+<button type="button" onclick="loadDoc()">AJAX </button>
+<script>
+
+function loadDoc() {
+	var xhttp = new XMLHttpRequest();
+	 xhttp.onreadystatechange = function() {
+		 alert(xhttp.readyState);
+		if (xhttp.readyState == 4 && xhttp.status == 200){
+			document.getElementById("demo").innerHTML = xhttp.responseText;
+		} 
+	 };
+	 xhttp.open("GET","AJAX.txt",true);
+	 xhttp.send();
+}
+</script>
+
+</BODY>
+
+
+</HTML>

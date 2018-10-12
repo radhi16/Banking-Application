@@ -1,0 +1,84 @@
+<!doctype html>
+<head>
+<title>Create Account </title>
+
+</head>
+<body>
+<h1 align="center"><font face="Algerian" size="50" >Create new account </font></h1>
+<br>
+<marquee direction="right" bgcolor="LavenderBlush"> WE ARE HAPPY U ARE HERE!!! </marquee>
+<br>
+<br>
+<br>
+      <script type="text/javascript">
+      var minAge = 18;
+      function calculateAge() {
+          var date = new Date(document.getElementById("date").value);
+          var today = new Date();
+
+          var timeDiff = Math.abs(today.getTime() - date.getTime());
+          var age1 = Math.ceil(timeDiff / (1000 * 3600 * 24)) / 365;
+          return age1;
+      }
+      //Compares calculated age with minimum age and acts according to rules//
+      function validateAge() {
+
+          var age = calculateAge();
+          if (age < minAge) {
+        	  
+        	  alert("Invalid age");
+        	 /*  var frmvalidator = new Validator("myform");
+              frmvalidator.addValidation("date","req","Age is below 18 years");
+ */          } 
+
+      }
+      
+      
+</script>
+<form action="./welcome1?from=createtable" method="post" id="myform">
+<table align="center" border="2">
+<tr bgcolor="	#C0C0C0 " >
+  <td>Name: </td>
+  <td> <input type="text" name="name" id="name" bgcolor="#C0C0C0" required> </td>
+  </tr>
+  
+  <tr bgcolor="LavenderBlush " >
+  <td>Address: </td>
+  <td> <input type="text" name="addres" id="addres"> </td>
+  </tr>
+  
+  <tr bgcolor="	#C0C0C0 ">
+  <td>Date of Birth: </td>
+  <td> <input type="date" name="date" id="date"> </td>
+  </tr>
+  
+  <tr  bgcolor="LavenderBlush ">
+  <td>Pan No: </td>
+  <td> <input type="text" name="panNo" id="panNo" required> </td>
+  </tr>
+  
+  <tr bgcolor="	#C0C0C0 ">
+  <td>Mobile No: </td>
+  <td> <input type="text" name="mobNo" id="mobNo" "> </td>
+  </tr>
+  
+  <tr  bgcolor="LavenderBlush ">
+  <td>Account Type: </td>
+  <td> <input type="radio" name="accountType" value="savings" id="accountType" checked>Savings<br>
+<input type="radio" name="accountType" value="current" id="accountType" >Current<br> </td>
+  </tr>
+  <tr></tr>
+  <tr></tr>
+
+ 
+</table>
+<br>
+<br>
+<center> <input type="submit" value="Submit" onClick="validateAge();">
+ <input type="reset" value="Reset" ></center>
+</form>
+
+ 
+
+</body>
+</html>
